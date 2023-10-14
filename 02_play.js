@@ -46,6 +46,16 @@ const person = {
 console.log(`${person.firstName} is a ${person.job}`);
 person.greetArrow();
 person.greetDecl();
+const copiedPerson = { person };
+console.log(copiedPerson);
+// {
+//     person: {
+//       firstName: 'Abhijit',
+//       job: 'Web developer',
+//       greetArrow: [Function: greetArrow],
+//       greetDecl: [Function: greetDecl]
+//     }
+// }
 
 //Array and array methods
 const hobbies = ["Cooking", "Sports"];
@@ -56,3 +66,34 @@ for (let hobby of hobbies) {
 //map
 console.log(hobbies.map((hobby) => `${hobby}123`));
 console.log(hobbies);
+
+//02 important operators - spread and rest operators
+const copied = [hobbies];
+console.log(copied); //[ [ 'Cooking', 'Sports' ] ]
+
+//Spread operators
+const copied1 = [...hobbies];
+console.log(copied1); //[ 'Cooking', 'Sports' ]
+
+const copiedPerson1 = { ...person };
+console.log(copiedPerson1);
+// {
+//     firstName: 'Abhijit',
+//     job: 'Web developer',
+//     greetArrow: [Function: greetArrow],
+//     greetDecl: [Function: greetDecl]
+// }
+
+//Rest operator
+function display1(arg1, arg2, arg3) {
+  return [arg1, arg2, arg3];
+}
+console.log(display1(1, 2, 3, 4));
+function display2(...args) {
+  return [...args];
+}
+console.log(display2(1, 2, 3, 4));
+
+// Spread and Rest operators looks the same, only it differs in the place of usage
+// /if we want to pull out elments out of array => Spread operator
+// /if we want to merge in elments of an array => Spread operator
