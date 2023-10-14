@@ -33,3 +33,16 @@ const addArrow = (a, b) => a + b;
 summarizeUser(firstName, age, hasHobbies);
 summarizeUserArrow(firstName, age, hasHobbies);
 console.log(addArrow(1, 2));
+
+//Objects, properties and methods
+const person = {
+  firstName: "Abhijit",
+  job: "Web developer",
+  greetArrow: () => console.log(`Hey, I am ${this.firstName}`),
+  greetDecl: function () {
+    console.log(`Hey, I am ${firstName}`);
+  },
+};
+console.log(`${person.firstName} is a ${person.job}`);
+person.greetArrow();
+person.greetDecl();
