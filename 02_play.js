@@ -95,5 +95,17 @@ function display2(...args) {
 console.log(display2(1, 2, 3, 4));
 
 // Spread and Rest operators looks the same, only it differs in the place of usage
-// /if we want to pull out elments out of array => Spread operator
-// /if we want to merge in elments of an array => Spread operator
+// if we want to pull out elments out of array => Spread operator
+// if we want to merge in elments of an array => rest operator
+
+//Destructuring in array
+const newHobbies = ["Cooking", "Reading"];
+const [hobby1, hobby2] = newHobbies;
+console.log(hobby1, hobby2);
+
+const employee = {
+  id: 1,
+  position: "Developer",
+};
+const { id: empId, position: empPos } = employee;
+console.log(empId, empPos);
