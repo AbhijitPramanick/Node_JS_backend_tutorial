@@ -46,3 +46,13 @@ const person = {
 console.log(`${person.firstName} is a ${person.job}`);
 person.greetArrow();
 person.greetDecl();
+
+//Array and array methods
+const hobbies = ["Cooking", "Sports"];
+for (let hobby of hobbies) {
+  console.log(hobby);
+}
+
+//map
+console.log(hobbies.map((hobby) => `${hobby}123`));
+console.log(hobbies);
