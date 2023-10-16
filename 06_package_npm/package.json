@@ -1,0 +1,29 @@
+{
+  "name": "06_package_npm",
+  "version": "1.0.0",
+  "description": "Node_JS_Tutorial",
+  "main": "06_index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhijitPramanick/Node_JS_backend_tutorial.git"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "tutorial"
+  ],
+  "author": "Abhijit Pramanick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhijitPramanick/Node_JS_backend_tutorial/issues"
+  },
+  "homepage": "https://github.com/AbhijitPramanick/Node_JS_backend_tutorial#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "colors": "^1.4.0",
+    "simple-node-logger": "^21.8.12"
+  }
+}
