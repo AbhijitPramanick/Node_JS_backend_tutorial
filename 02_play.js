@@ -109,3 +109,36 @@ const employee = {
 };
 const { id: empId, position: empPos } = employee;
 console.log(empId, empPos);
+
+//Few more basics - conditionals, loops, array
+const x = "20";
+if (x === 20) console.log("Strict equality operator true");
+if (x == 20) console.log("Loose equality operator true");
+
+//loop
+console.log("This is the start of loop");
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+//array
+const arr = [1, 2, 3, 4, 5, 6, 7];
+console.log(arr);
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+//filter function
+let count = 0;
+arr.filter((el) => {
+  if (el > 3) {
+    console.log(el);
+    count++;
+  }
+});
+console.log(`No of element greater than 3 is : ${count}`);
+
+//How to import:
+const play_export = require("./02_play_export");
+console.log("x : " + play_export.x);
+console.log("y : " + play_export.y);

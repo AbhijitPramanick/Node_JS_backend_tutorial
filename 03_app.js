@@ -1,9 +1,15 @@
 // Node JS Basics
+
+//Importing global packages
 const http = require("http");
+const fs = require("fs");
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method, req.headers);
   //   process.exit();
+
+  //Parsing
   const url = req.url;
+  const method = req.method;
   if (url === "/") {
     res.write(`<html>`);
     res.write(
@@ -20,6 +26,15 @@ const server = http.createServer((req, res) => {
       </body>`
     );
     res.write(`</html>`);
+    return res.end();
+  }
+
+  if (url === "/message" && method === "POST") {
+    // here we want to redirect the user to '/' and  we want to credate a new file and store the message in a new file with the message the user entered in it
+
+    fs.writeFileSync("message03.txt", "DUMMY");
+    res.statusCode = 302;
+    res.setHeader("Location", "/");
     return res.end();
   }
   res.setHeader("content-type", "text/html");
