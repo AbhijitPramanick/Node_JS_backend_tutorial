@@ -4,3 +4,6 @@ const colors = require("colors");
 console.log("Package.json".red);
 console.log("This is blue".blue);
 console.log("This is green".green);
+
+console.log("Trying nodemon");
+console.log("Nodemon is awesome");
