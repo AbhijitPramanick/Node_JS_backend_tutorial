@@ -22,13 +22,22 @@
       h1 {
         font-size: 3rem;
       }
+      h2 {
+        font-size: 2rem;
+      }
     </style>
   </head>
   <body>
+    <!-- <%- include('common/header');%> -->
     <div class="container">
       <h1>Welcome, <%= user.name%></h1>
       <h2>Name : <%= user.name%></h2>
       <h2>City : <%= user.city%></h2>
+      <ul>
+        <% user.skills.forEach((items)=>{%>
+        <li><%= items%></li>
+        <% })%>
+      </ul>
     </div>
   </body>
 </html>
