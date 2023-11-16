@@ -12,3 +12,11 @@ const handleUpdate = async () => {
   await client.close();
 };
 handleUpdate();
+
+// {
+//     acknowledged: true,
+//     modifiedCount: 3,
+//     upsertedId: null,
+//     upsertedCount: 0,
+//     matchedCount: 3
+//   }
